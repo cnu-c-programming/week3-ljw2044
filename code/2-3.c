@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void divide(int a, int b, int *q, int *r) {
+    if (b != 0) {
+        *q = a / b;
+        *r = a % b;
+    } else {
+        printf("Error: Division by zero\n");
+        *q = 0;
+        *r = 0;
+    }
+}
+
+int main() {
+    int a = 27;
+    int b = 4;
+    int q = 0;
+    int r = 0;
+
+    divide(a, b, &q, &r);
+
+    printf("%d\n%d\n", q, r);
+
+    return 0;
+}
